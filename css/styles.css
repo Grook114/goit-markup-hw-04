@@ -62,8 +62,16 @@ body {
 
 .hero {
   height: 600px;
-  background: linear-gradient(rgba(46,47,66,0.7), rgba(46,47,66,0.7)),
-  url('./images/HW4/people-office\ 1.png') center/cover no-repeat;
+  background-image: url('../images/HW4/people-office-1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* затемнение */
+.hero-overlay {
+  height: 100%;
+  background: rgba(46, 47, 66, 0.7);
 
   display: flex;
   justify-content: center;
@@ -71,24 +79,25 @@ body {
   text-align: center;
 }
 
+/* контент */
 .hero-content {
   width: 496px;
 }
 
-.hero h1 {
-  color: white;
+.hero-title {
+  color: #ffffff;
   font-size: 56px;
   line-height: 1.07;
   margin-bottom: 48px;
 }
 
-.btn {
+.hero-btn {
   background: #4d5ae5;
-  color: white;
+  color: #ffffff;
   padding: 16px 32px;
   border: none;
   border-radius: 4px;
-  font-weight: 500;
+  cursor: pointer;
 }
 
 /* SECTIONS */
@@ -207,24 +216,52 @@ body {
   color: #434455;
 }
 
-/* FOOTER */
 
 .footer {
   background: #2e2f42;
-  padding: 100px ;
-  color: white;
+  padding: 100px 0;
+  color: #ffffff;
 }
 
 .footer-container {
-  width: 264px;
-  margin-left: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 120px;
 }
 
 .footer-logo span {
   color: #f4f4fd;
 }
 
+.footer-text {
+  max-width: 264px;
+  margin-top: 16px;
+}
+
+.footer-title {
+  margin-bottom: 16px;
+}
+
 .ficon {
-    margin: 0 auto;
   display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.f-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #4d5ae5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature img {
+  background: #f4f4fd;
+  padding: 24px;
+  border-radius: 4px;
+  margin-bottom: 8px;
 }
